@@ -1,0 +1,286 @@
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../Poppins/Poppins-Black.ttf");
+  src: url("../Poppins/Poppins-BlackItalic.ttf");
+  src: url("../Poppins/Poppins-Bold.ttf");
+  src: url("../Poppins/Poppins-BoldItalic.ttf");
+  src: url("../Poppins/Poppins-ExtraBold.ttf");
+  src: url("../Poppins/Poppins-ExtraBoldItalic.ttf");
+  src: url("../Poppins/Poppins-ExtraLight.ttf");
+  src: url("../Poppins/Poppins-ExtraLightItalic.ttf");
+  src: url("../Poppins/Poppins-Italic.ttf");
+  src: url("../Poppins/Poppins-Light.ttf");
+  src: url("../Poppins/Poppins-LightItalic.ttf");
+  src: url("../Poppins/Poppins-Medium.ttf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: teal;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.container {
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.boxBtn{
+  width: 100%;
+  height: 400px;
+  background-color: rgba(255 , 255 ,255 , .2);
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxBtn .w50{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxBtn button{
+  width: 100px;
+  height: 35px;
+  font-size: 16px ;
+  letter-spacing: 2px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+
+.formBx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 50%;
+  height: 100%;
+  transition: left .3s linear;
+  -webkit-transition: left .3s linear;
+  -moz-transition: left .3s linear;
+  -ms-transition: left .3s linear;
+  -o-transition: left .3s linear;
+  z-index: 100;
+  overflow: hidden;
+}
+.formBx.active{
+  left: 50%;
+}
+.formBx .form{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left .3s linear;
+  -webkit-transition: left .3s linear;
+  -moz-transition: left .3s linear;
+  -ms-transition: left .3s linear;
+  -o-transition: left .3s linear;
+}
+.formBx.active .login{
+  left: -100%;
+  transition-delay: 0 ;
+}
+.formBx .register{
+  left: 100%;
+}
+.formBx.active .register{
+  left: 0;
+}
+
+.formBx .form .flex{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.formBx .form form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+.formBx .form form .gorup{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 15px;
+}
+.formBx .form form h2{
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.formBx .form form .gorup span{
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  border-right:2px solid teal;
+  border-left:2px solid teal;
+  color: teal;
+  background-color: #fff;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  width: 100px;
+  text-align: center;
+  text-transform: capitalize;
+  pointer-events: none;
+}
+.formBx .form form .gorup input {
+  padding: 12px 15px;
+  outline: none;
+  font-size: 16px;
+  border: 2px solid #f7f7f7;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.formBx .form form .gorup i{
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+}
+
+.formBx .form form button{
+  width: 100px;
+  height: 35px;
+  background-color: teal;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.formBx .form form a{
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
+.formBx .form .social {
+  margin-top: 20px;
+  width: 100%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.formBx .form .social .or {
+  position: relative;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formBx .form .social .or::before{
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background-color: #555;
+}
+.formBx .form .social .or  span{
+  width: 60px;
+  text-align: center;
+  background-color: #fff;
+  z-index: 2;
+}
+.formBx .form .social ul {
+  display: flex;
+  margin-top: 10px;
+}
+.formBx .form .social ul li a{
+  display: flex;
+  padding: 10px;
+  font-size: 20px;
+  color: #555;
+}
+
+
+@media (max-width:991px) {
+  .container{
+    width: 80%;
+  }
+  .boxBtn{
+    height:500px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+  }
+  .boxBtn .w50{
+    width: 100%;
+  }
+  .formBx{
+    width: 100%;
+    z-index: 100;
+    top: -60px;
+    transition: top .3s linear;
+    -webkit-transition: top .3s linear;
+    -moz-transition: top .3s linear;
+    -ms-transition: top .3s linear;
+    -o-transition: top .3s linear;
+}
+  .formBx.active{
+    left: 0;
+    top: 60px;
+  
+  }
+
+ 
+}

@@ -1,5 +1,3 @@
-
-
 @font-face {
   font-family: "Poppins";
   src: url("../Poppins/Poppins-Black.ttf");
@@ -37,7 +35,7 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
-body.colorBg{
+body.colorBg {
   background-color: seagreen;
 }
 
@@ -69,53 +67,53 @@ p {
   justify-content: center;
   position: relative;
 }
-.boxBtn{
+.boxBtn {
   width: 100%;
   height: 400px;
-  background-color: rgba(255 , 255 ,255 , .2);
-  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.boxBtn .w50{
+.boxBtn .w50 {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.boxBtn button{
-  width: 100px;
-  height: 35px;
-  font-size: 16px ;
+.boxBtn button {
+  width: 120px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
   letter-spacing: 2px;
   background-color: #fff;
   border: none;
   cursor: pointer;
-  text-transform: capitalize;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
-
-.formBx{
+.formBx {
   position: absolute;
   top: 0;
   left: 0;
   background-color: #fff;
   width: 50%;
   height: 100%;
-  transition: left .3s linear;
-  -webkit-transition: left .3s linear;
-  -moz-transition: left .3s linear;
-  -ms-transition: left .3s linear;
-  -o-transition: left .3s linear;
+  transition: left 0.3s linear;
+  -webkit-transition: left 0.3s linear;
+  -moz-transition: left 0.3s linear;
+  -ms-transition: left 0.3s linear;
+  -o-transition: left 0.3s linear;
   z-index: 100;
   overflow: hidden;
-  box-shadow: 0 0 40px rgba(0,0,0,0.2);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
-.formBx.active{
+.formBx.active {
   left: 50%;
 }
-.formBx .form{
+.formBx .form {
   position: absolute;
   left: 0;
   width: 100%;
@@ -124,48 +122,46 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: left .3s linear;
-  -webkit-transition: left .3s linear;
-  -moz-transition: left .3s linear;
-  -ms-transition: left .3s linear;
-  -o-transition: left .3s linear;
+  transition: left 0.3s linear;
+  -webkit-transition: left 0.3s linear;
+  -moz-transition: left 0.3s linear;
+  -ms-transition: left 0.3s linear;
+  -o-transition: left 0.3s linear;
 }
-.formBx.active .login{
+.formBx.active .login {
   left: -100%;
-  transition-delay: 0 ;
 }
-.formBx .register{
+.formBx .register {
   left: 100%;
 }
-.formBx.active .register{
+.formBx.active .register {
   left: 0;
 }
 
-.formBx .form .flex{
+.formBx .form .flex {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.formBx .form form{
+.formBx .form form {
   width: 100%;
   display: flex;
   flex-direction: column;
-
 }
-.formBx .form form .gorup{
+.formBx .form form .gorup {
   display: flex;
   flex-direction: column;
   position: relative;
   margin-bottom: 15px;
 }
-.formBx .form form h2{
+.formBx .form form h2 {
   font-size: 25px;
   letter-spacing: 2px;
   margin-bottom: 20px;
   text-transform: uppercase;
   text-align: center;
 }
-.formBx .form form .gorup span{
+.formBx .form form .gorup span {
   position: absolute;
   top: 20px;
   left: 10px;
@@ -176,30 +172,35 @@ p {
   text-align: center;
   text-transform: capitalize;
   pointer-events: none;
-  transition: color .3s linear , top .3s linear , left .3s linear , font-size .3s linear;
-  -webkit-transition: color .3s linear , top .3s linear , left .3s linear , font-size .3s linear;
-  -moz-transition: color .3s linear , top .3s linear , left .3s linear , font-size .3s linear;
-  -ms-transition: color .3s linear , top .3s linear , left .3s linear , font-size .3s linear;
-  -o-transition: color .3s linear , top .3s linear , left .3s linear , font-size .3s linear;
+  transition: color 0.3s linear, top 0.3s linear, left 0.3s linear,
+    font-size 0.3s linear;
+  -webkit-transition: color 0.3s linear, top 0.3s linear, left 0.3s linear,
+    font-size 0.3s linear;
+  -moz-transition: color 0.3s linear, top 0.3s linear, left 0.3s linear,
+    font-size 0.3s linear;
+  -ms-transition: color 0.3s linear, top 0.3s linear, left 0.3s linear,
+    font-size 0.3s linear;
+  -o-transition: color 0.3s linear, top 0.3s linear, left 0.3s linear,
+    font-size 0.3s linear;
 }
 .formBx .form form .gorup input {
-  padding: 12px ;
+  padding: 12px;
   outline: none;
   font-size: 16px;
   border: none;
   border-bottom: 2px solid #b8b5b5;
   background-color: #fff;
 }
-.formBx .form input:focus ~ span{
+.formBx .form input:focus ~ span {
   color: teal;
   top: -5px;
   left: 0;
   font-size: 14px;
 }
-.formBx.active .form .gorup input:focus ~ span{
+.formBx.active .form .gorup input:focus ~ span {
   color: seagreen;
 }
-.formBx .form form .gorup i{
+.formBx .form form .gorup i {
   position: absolute;
   right: 15px;
   top: 12px;
@@ -208,21 +209,22 @@ p {
   color: #555;
 }
 
-.formBx .form form button{
+.formBx .form form button {
   width: 100px;
   height: 35px;
-  background-color: teal;
   border: none;
   color: #fff;
   cursor: pointer;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: capitalize;
+  background-color: teal;
 }
-.formBx.active .form button{
-  background-color: seagreen;
+.formBx .form form .regFormBtn  {
+  background-color: seagreen ;
+ 
 }
-.formBx .form form a{
+.formBx .form form a {
   font-size: 14px;
   color: #888;
   margin-top: 10px;
@@ -231,26 +233,25 @@ p {
 .formBx .form .social {
   margin-top: 20px;
   width: 100%;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }
 .formBx .form .social .or {
   position: relative;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-.formBx .form .social .or::before{
+.formBx .form .social .or::before {
   content: "";
   position: absolute;
   width: 200px;
   height: 2px;
   background-color: #555;
 }
-.formBx .form .social .or  span{
+.formBx .form .social .or span {
   width: 60px;
   text-align: center;
   background-color: #fff;
@@ -260,43 +261,45 @@ p {
   display: flex;
   margin-top: 10px;
 }
-.formBx .form .social ul li a{
+.formBx .form .social ul li a {
   display: flex;
   padding: 10px;
   font-size: 20px;
   color: #555;
 }
 
-
-@media (max-width:991px) {
-  .container{
+@media (max-width: 991px) {
+  .container {
     width: 80%;
+    height: 400px;
   }
-  .boxBtn{
-    height:500px;
-    flex-direction: column;
+  .boxBtn {
+    height: 50px;
+    flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    position: relative;
-  }
-  .boxBtn .w50{
+    position: absolute;
+    bottom: -50px;
     width: 100%;
-  }
-  .formBx{
-    width: 100%;
-    z-index: 100;
-    top: -60px;
-    transition: top .3s linear;
-    -webkit-transition: top .3s linear;
-    -moz-transition: top .3s linear;
-    -ms-transition: top .3s linear;
-    -o-transition: top .3s linear;
-}
-  .formBx.active{
-    left: 0;
-    top: 60px;
-  
   }
 
+  
+  .boxBtn .w50 {
+    width: 50%;
+  }
+  .formBx {
+    width: 100%;
+    height: 400px;
+    z-index: 100;
+    top: 0;
+    transition: top 0.3s linear;
+    -webkit-transition: top 0.3s linear;
+    -moz-transition: top 0.3s linear;
+    -ms-transition: top 0.3s linear;
+    -o-transition: top 0.3s linear;
+  }
+  .formBx.active {
+    left: 0;
+  }
  
 }

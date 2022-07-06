@@ -37,6 +37,9 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+body.colorBg{
+  background-color: seagreen;
+}
 
 ul {
   list-style: none;
@@ -107,6 +110,7 @@ p {
   -o-transition: left .3s linear;
   z-index: 100;
   overflow: hidden;
+  box-shadow: 0 0 40px rgba(0,0,0,0.2);
 }
 .formBx.active{
   left: 50%;
@@ -159,33 +163,41 @@ p {
   letter-spacing: 2px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  text-align: center;
 }
 .formBx .form form .gorup span{
   position: absolute;
-  top: -10px;
-  left: 20px;
-  border-right:2px solid teal;
-  border-left:2px solid teal;
-  color: teal;
-  background-color: #fff;
+  top: 20px;
+  left: 10px;
+  color: #999;
   font-size: 12px;
   height: 20px;
   line-height: 20px;
-  width: 100px;
   text-align: center;
   text-transform: capitalize;
   pointer-events: none;
+  transition: color .3s linear , top .3s linear , left .3s linear , font-size .3s linear;
+  -webkit-transition: color .3s linear , top .3s linear , left .3s linear , font-size .3s linear;
+  -moz-transition: color .3s linear , top .3s linear , left .3s linear , font-size .3s linear;
+  -ms-transition: color .3s linear , top .3s linear , left .3s linear , font-size .3s linear;
+  -o-transition: color .3s linear , top .3s linear , left .3s linear , font-size .3s linear;
 }
 .formBx .form form .gorup input {
-  padding: 12px 15px;
+  padding: 12px ;
   outline: none;
   font-size: 16px;
-  border: 2px solid #f7f7f7;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid #b8b5b5;
+  background-color: #fff;
+}
+.formBx .form input:focus ~ span{
+  color: teal;
+  top: -5px;
+  left: 0;
+  font-size: 14px;
+}
+.formBx.active .form .gorup input:focus ~ span{
+  color: seagreen;
 }
 .formBx .form form .gorup i{
   position: absolute;
@@ -203,8 +215,12 @@ p {
   border: none;
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.formBx.active .form button{
+  background-color: seagreen;
 }
 .formBx .form form a{
   font-size: 14px;
